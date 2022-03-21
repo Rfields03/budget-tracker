@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-const URI = (process.env.MONGOdb_URI || "mongodb://localhost27017/budget-tracker",
+const URI = (process.env.MONGOdb_URI || "mongodb://localhost/rfields03-budget-tracker",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
