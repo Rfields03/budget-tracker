@@ -16,16 +16,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-const URI = process.env.MONGOdb_URI || "mongodb://localhost/budget-tracker";
-mongoose.connect(
-  URI,
+const URI = (process.env.MONGOdb_URI || "mongodb://localhost27017/budget-tracker",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
-  }
-);
+  });
 
 // routes
 app.use(require("./routes/api"));
