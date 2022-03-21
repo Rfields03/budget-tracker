@@ -12,7 +12,7 @@ This application uses the following Node.js packages:
 - [compression](https://www.npmjs.com/package/compression)
 
 ## Instructions
-This project is deployed on Heroku [here](https://rfields03-budget-tracker.herokuapp.com/).
+Clone Repo and at command line, type "node server.js" and proceed to [here](https://rfields03-budget-tracker.herokuapp.com/).
 
 ## Page Screenshots
 ![ReadMe_ScreenShot_iOS](./public/icons/capture.jpg)
