@@ -15,4 +15,4 @@ This application uses the following Node.js packages:
 This project is deployed on Heroku [here](https://rfields03-budget-tracker.herokuapp.com/).
 
 ## Page Screenshots
-![ReadMe_ScreenShot_iOS](./public/icons/screenshot.jpg)
+![ReadMe_ScreenShot_iOS](./public/icons/capture.jpg)
