@@ -24,8 +24,7 @@ mongoose.connect(
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
-  },
-  (err) => console.log(err)
+  }
 );
 
 // routes

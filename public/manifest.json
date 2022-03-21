@@ -1,17 +1,20 @@
 {
-  "name": "Budget App",
-  "short_name": "Budget App",
+  "name": "Budget Tracker",
+  "short_name": "Budget Tracker",
   "icons": [
       {
           "src": "icons/icon-192x192.png",
           "sizes": "192x192",
-          "type": "timage/png"
+          "type": "image/png"
       },
       {
           "src": "icons/icon-512x512.png",
           "sizes": "512x512",
-          "type": "timage/png"
+          "type": "image/png"
       }
   ],
-  "start_url": "/"
+  "theme_color": "#87A890",
+    "background_color": "#F5F5F5",
+    "start_url": "/",
+    "display": "standalone"
 }
