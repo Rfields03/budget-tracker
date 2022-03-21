@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-const URI = process.env.MONGOdb_URI || "mongodb://localhost/budget-tracker";
+const URI = process.env.MONGODB_URI || "mongoDB://localhost/budget-tracker";
 mongoose.connect(
   URI,
   {
