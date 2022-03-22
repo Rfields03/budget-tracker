@@ -2,6 +2,7 @@ const router = require("express").Router();
 const Transaction = require("../models/transaction");
 
 router.post("/api/transaction", ({body}, res) => {
+  console.log('route to post transaction')
   Transaction.create(body)
     .then(dbTransaction => {
       res.json(dbTransaction);
@@ -22,6 +23,7 @@ router.post("/api/transaction/bulk", ({body}, res) => {
 });
 
 router.get("/api/transaction", (req, res) => {
+  console.log('here is my get transactions')
   Transaction.find({}).sort({date: -1})
     .then(dbTransaction => {
       res.json(dbTransaction);

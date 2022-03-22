@@ -16,13 +16,14 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-const URI = (process.env.MONGOdb_URI || "mongodb://localhost/rfields03-budget-tracker",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  });
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/rfields03-budget-tracker";
+
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
 // routes
 app.use(require("./routes/api"));

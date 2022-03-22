@@ -22,7 +22,6 @@ request.onerror = function (event) {
 function saveRecord(record) {
   const transaction = db.transaction(["pending"], "readwrite");
   const store = transaction.objectStore("pending");
-
   store.add(record);
 }
 
@@ -42,11 +41,15 @@ function checkDatabase() {
         }
       })
         .then(response => response.json())
-        .then(() => {
+        .then((serverResponse) => {
+          if(serverResponse) {
+            throw new Error(serverResponse);
+          }
           // delete records if successful
           const transaction = db.transaction(["pending"], "readwrite");
           const store = transaction.objectStore("pending");
           store.clear();
+          console.log('data pushed to Mongo and deleted from indexedDB')
         });
     }
   };
